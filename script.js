@@ -68,7 +68,7 @@ async function buscarCondicoes() {
       if (score >= 4) {
         labelClass = 'excelente';
         labelText = 'Excelente - Deu Praia!';
-      } else if (score >= 3) {
+      } else if (score >= 2) {
         labelClass = 'aceitavel';
         labelText = 'Aceitável';
       } else {
@@ -86,15 +86,15 @@ async function buscarCondicoes() {
       card.innerHTML = `
         <h2>${praia.nome}</h2>
         
-        <p>Vento: ${windSpeed * 3.6.toFixed(1)} km/h</p>
-       
+        <p class="wind-label">${windSpeed * 3.6.toFixed(0)} km/h</p>
+       <p>Temperatura: ${data.main.temp}°C</p></p>
         <span class="score-label ${labelClass}">${labelText}</span>
       `;
 
       card.appendChild(windArrow);
       container.appendChild(card);
     }
-    // <p>Condições: ${data.weather[0].description} <p>Temperatura: ${data.main.temp}°C</p></p>
+    // <p>Condições: ${data.weather[0].description} 
   } catch (error) {
     console.error(error);
     const errorMessage = document.createElement('p');

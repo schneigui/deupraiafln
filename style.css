@@ -5,6 +5,23 @@ body {
   margin: 0;
   padding: 20px;
 }
+
+
+
+.geist{
+  font-family: "Geist", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+*{
+  font-family: "Geist" ;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
 h1 {
   text-align: left;
 }
@@ -25,15 +42,24 @@ h1 {
 }
 .wind-arrow {
   position: absolute;
-  top: 71px;
+  top: calc(50% - 12px);
   right: 54px;
-  width: 0;
-  height: 0;
-  border-left: 10px solid transparent;
+  width: 24px;
+  height: 24px;
+  background-image: url('img/arrow.png') ;
+  background-size: contain;
+  transform-origin: center;
+  /* border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 20px solid #ffffff;
-  margin: 10px auto;
+  margin: 10px auto; */
   transition: transform 0.3s ease;
+}
+.wind-label{
+  position: absolute;
+  top: calc(50% + 12px);
+  text-align: center;
+  right: 24px;
 }
 .score-label {
   display: inline-block;
